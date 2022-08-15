@@ -153,13 +153,13 @@ let Student = function(name, age, hometown) {
   this.hometown = hometown;
 };
 
-let joe = new Student('Joe', 'Schmoe', 100);
+let joe = new Student('Joe', 100, 'Schmoe');
 
 // DONE: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 console.log(joe);
 
-// TODO: After viewing the previous console.log(), return the code to a working state.
+// DONE: After viewing the previous console.log(), return the code to a working state.
 
 
 
@@ -167,11 +167,11 @@ Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
+// DONE: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
-// TODO: After viewing the previous console.log(), return the code to a working state.
+// DONE: After viewing the previous console.log(), return the code to a working state.
 
 
 
@@ -179,8 +179,8 @@ Student.courseName = function() {
   return 'This student is enrolled in Code 301.';
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(Student.courseName());
 
 
 
@@ -190,18 +190,18 @@ Student.prototype.scope = function() {
   console.log(this);
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+// DONE: Uncomment the following line of code to see the output in the browser console
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+// DONE: Uncomment the following line of code to see the output in the browser console
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+//"this" would be the the name, age, and hometown
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//It is reffering to the window object, from what I can tell.
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//Honestly, that is a good question. I wish I could answer it, but I can't. I am going to need help on this one.
